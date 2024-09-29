@@ -189,9 +189,8 @@ def plot_gh_results(weights, estimates, predictions, actual, time_step=0):
     plt.ylim([156.0, 173])
 
 
-def print_results(estimates, prediction, weight):
-    print('previous estimate: {:.2f}, prediction: {:.2f}, estimate {:.2f}'.format(
-          estimates[-2], prediction, weight))
+def print_results(estimates, prediction: float, weight: float, measurement: float):
+    print('previous estimate: {:.2f}, prediction: {:.2f}, measurement, {:.2f}, estimate {:.2f}'.format( estimates[-2], prediction, measurement ,weight))
 
 
 def plot_g_h_results(measurements, filtered_data,
